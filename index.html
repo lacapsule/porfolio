@@ -9,7 +9,7 @@
 <body>
     <main>
         <header>
-            <h1>Kenny Bonvalet</h1>
+            <h1><a href="#hero">Kenny Bonvalet</a></h1>
             <nav><a href="#qui">Qui suis-je</a></nav>
             <nav><a href="#catalogue">Catalogue</a></nav>
             <nav><a href="#contact">Contact</a></nav>
@@ -71,13 +71,14 @@
     </section>
     <section id="contact">
         <h2>Me contacter</h2>
-        <span>
-            <input type="name" placeholder="Votre nom" required>
-            <input type="mail" placeholder="Votre adresse mail" required>
-            <input type="text" placeholder="Votre sujet" required>
-            <input type="text" placeholder="Votre message" required>
+        <form action="https://lacapsule.org/php/mail/kenny/mail.php" method="post">
+            <input type="name" name="nom" placeholder="Votre nom" required>
+            <input type="mail" name="mail" placeholder="Votre adresse mail" required>
+            <input type="text" name="sujet" placeholder="Votre sujet" required>
+            <input type="text" name="message" placeholder="Votre message" required>
             <input type="button" value="Envoyer">
-        </span>
+            <input type="hidden" name="honeypot">
+        </form>
     </section>
         <footer></footer>
     </main>
